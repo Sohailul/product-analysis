@@ -4,7 +4,7 @@ import './Header.css';
 
 const Header = () => {
     return (
-        <nav>
+        <nav className='h-20 flex justify-center items-center'>
             <NavLink className={({ isActive }) => (isActive ? "active-link" : "link")} to="/">Home</NavLink>
             <NavLink className={({ isActive }) => (isActive ? "active-link" : "link")} to="/reviews">Reviews</NavLink>
             <NavLink className={({ isActive }) => (isActive ? "active-link" : "link")} to="/dashboard">Dashboard</NavLink>
