@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import img from '../../Assets/img/ledger-nano-x.png';
 import user from '../../Assets/img/user.jpg';
 
 const Home = () => {
+  let navigate = useNavigate();
   const reviews = [
     {
       id: 1,
@@ -53,7 +54,7 @@ const Home = () => {
           }
         </div>
         <div className='flex justify-center'>
-          <button className='border-2 border-cyan-600 hover:bg-cyan-600 px-3 py-2 rounded-full justify-center items-center mt-10'>See all Reviews</button>
+          <Link to='/reviews' className='border-2 border-cyan-600 hover:bg-cyan-600 px-3 py-2 rounded-full justify-center items-center mt-10'>See all Reviews</Link>
         </div>
       </div>
     </div>
