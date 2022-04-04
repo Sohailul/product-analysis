@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Jhon Doe",
+        "feedback": "I'd like the box have a shield to cut before opening. Great Experience.",
+        "rating": 4.5
+    },
+    {
+        "id": 2,
+        "name": "Lebogang S",
+        "feedback": "Super happy with the service and product. The product is very easy to use.",
+        "rating": 4.5
+    },
+    {
+        "id": 3,
+        "name": "Caleb M.",
+        "feedback": "Great experience, shipped fast, easy set up cant ask for much else.",
+        "rating": 4.5
+    },
+    {
+        "id": 4,
+        "name": "Troy D.",
+        "feedback": "With ease of purchase to set up and holding currency. A+",
+        "rating": 4.5
+    },
+    {
+        "id": 5,
+        "name": "Kurt t.",
+        "feedback": "Small peace of mind knowing that my cryptocurrencies are much safer from hackers.",
+        "rating": 4.5
+    },
+    {
+        "id": 6,
+        "name": "Alvano",
+        "feedback": "Well done. You should have a bundle for this model. Awesome service.",
+        "rating": 4.5
+    },
+    {
+        "id": 7,
+        "name": "Rodrigo",
+        "feedback": "Fast shipping, great product easy to use with Metamask. Best service ever.",
+        "rating": 4.5
+    }
+]

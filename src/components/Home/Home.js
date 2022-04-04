@@ -1,31 +1,13 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import img from '../../Assets/img/ledger-nano-x.png';
 import user from '../../Assets/img/user.jpg';
+import Rating from 'react-rating';
+import { AiFillStar } from 'react-icons/ai';
+import useReviews from '../../Hooks/useReviews';
 
 const Home = () => {
-  let navigate = useNavigate();
-  const reviews = [
-    {
-      id: 1,
-      name: "Jhon Doe",
-      feedback: "I'd like the box have a shield to cut before opening. Great Experience.",
-      rating: 5
-    },
-    {
-      id: 2,
-      name: "Lebogang S",
-      feedback: "Super happy with the service and product. The product is very easy to use.",
-      rating: 5
-    },
-    {
-      id: 3,
-      name: "Caleb M.",
-      feedback: "Great experience, shipped fast, easy set up cant ask for much else.",
-      rating: 5
-    },
-
-  ]
+  const [reviews, setReviews] = useReviews();
   return (
     <div className='px-4 pb-24 mx-auto max-w-7xl md:px-2'>
       <div className='h-full grid grid-cols-1 items-center md:grid-cols-2 justify-items-center gap-4 md:justify-items-around content-center'>
@@ -44,12 +26,20 @@ const Home = () => {
         <h1 className='text-3xl text-center mb-10'>Customer Reviews(3)</h1>
         <div className='grid grid-cols-1 gap-10 md:grid-cols-3'>
           {
-            reviews.map(review =>
+            reviews.slice(0, 3).map(review =>
               <div className='bg-cyan-600 text-white px-5 py-3 rounded'>
                 <img className='w-14 h-14 m-auto rounded-full' src={user} alt='ledger-nano-x' />
                 <h2 className='text-2xl text-center mt-2'>{review.name}</h2>
                 <h3 className='text-center mt-2'>{review.feedback}</h3>
-                <p className='text-center'>Ratings: {review.rating}</p>
+                <div className='text-center mt-5'>
+                  <Rating
+                    initialRating={4.5}
+                    emptySymbol={<AiFillStar />}
+                    fullSymbol={<AiFillStar style={{ color: 'goldenrod' }} icon={AiFillStar} />}
+                    readonly
+                  ></Rating>
+                  <p>{review.rating}</p>
+                </div>
               </div>)
           }
         </div>
